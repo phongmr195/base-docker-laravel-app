@@ -1,7 +1,7 @@
 version: "3.8"
 services:
-    api:
-        container_name: api
+    laravel_app:
+        container_name: laravel_app
         build:
             context: .
             target: php
@@ -15,10 +15,10 @@ services:
         ports:
             - 9000:8080
         depends_on:
-            - database
+            - laravel_db
             - redis
-    database:
-        container_name: database
+    laravel_db:
+        container_name: laravel_db
         image: mysql:8.0
         ports:
             -   3306:3306

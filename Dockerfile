@@ -2,10 +2,10 @@
 FROM php:8.1-fpm as php
 
 # Set environment variables
-ENV PHP_OPCACHE_ENABLE=1
-ENV PHP_OPCACHE_ENABLE_CLI=1
-ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS=1
-ENV PHP_OPCACHE_REVALIDATE_FREQ=1
+ENV PHP_OPCACHE_ENABLE=0
+ENV PHP_OPCACHE_ENABLE_CLI=0
+ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
+ENV PHP_OPCACHE_REVALIDATE_FREQ=0
 
 # Install dependencies.
 RUN apt-get update && apt-get install -y unzip libpq-dev libcurl4-gnutls-dev nginx libonig-dev
