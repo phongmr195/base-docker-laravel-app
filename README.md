@@ -1,1 +1,5 @@
-# base-docker-laravel-image
+# Base Docker Laravel Image
+# Run
+```bash
+    docker compose up -d --build
+```
